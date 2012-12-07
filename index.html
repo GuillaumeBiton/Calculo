@@ -11,11 +11,11 @@
 	<body ng-app="Calculo">
 		<div ng-controller="appCtrl">
 			<div class="output">
-				<h1 ng-click='clear()'>{{solve()}}</h1>
+				<h1 ng-click='clear()'>{{solve() | number}}</h1>
 				<h2>{{formula.join('')}}</h2>
 			</div>
 			<ul class="input-pad">
-				<li ng-repeat='input in pad' on-click-or-touch='add(input)'>{{input}}</li>
+				<li ng-repeat='input in pad' on-touch='add(input)'>{{input}}</li>
 			</ul>
 		</div>
 		

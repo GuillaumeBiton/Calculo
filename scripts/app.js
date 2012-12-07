@@ -13,14 +13,14 @@ app.controller('appCtrl', function($scope) {
 	$scope.solve = function() {
 		if(typeof eval($scope.formula.slice(-1)[0]) != "number") return eval($scope.formula.slice(0, $scope.formula.length - 1).join(''));
         else return eval($scope.formula.join(''));
-	}
+	};
 
 	$scope.clear = function() {
 		$scope.formula = ['0'];
-	}
+	};
 });
 
-app.directive('onClickOrTouch', [ '$parse', function($parse) {
+app.directive('onTouch', [ '$parse', function($parse) {
   return {
         restrict: 'A',
         link: function(scope, elm, attrs) {

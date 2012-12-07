@@ -178,3 +178,5 @@ I find a performance's problem when using my calculator on device mobile. The on
 So here I create a directive that handle a function on click or Touch event.
 
 The performance improvements on mobile device are huge.
+
+AngularJS allows filter on values. I use it to have a limitation on numbers.
