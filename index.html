@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>Calculo</title>
 		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body ng-app="Calculo">
@@ -13,7 +15,7 @@
 				<h2>{{formula.join('')}}</h2>
 			</div>
 			<ul class="input-pad">
-				<li ng-repeat='input in pad' ng-click='add(input)'>{{input}}</li>
+				<li ng-repeat='input in pad' on-click-or-touch='add(input)'>{{input}}</li>
 			</ul>
 		</div>
 		

@@ -146,3 +146,35 @@ I also want to clear and I bind with a click on the result :
 	...
 
 So my calculator is quite functionnal so I can push to github.
+
+### Step 5 - Improvements
+
+First I add the meta viewport to best fit with mobile device.
+
+I find a performance's problem when using my calculator on device mobile. The onclick event doesn't fit well with touchable screen. The solution is to bind touchstart event on touchable device and onclick otherwise. Angularjs lets us create directives like that:
+
+	app.directive('onClickOrTouch', [ '$parse', function($parse) {
+	  return {
+	        restrict: 'A',
+	        link: function(scope, elm, attrs) {
+	            var ontouchFn = $parse(attrs.onTouch);
+	            var params = Array.prototype.slice.call(arguments);
+	            params = params.splice(1);
+	            ( 'ontouchstart' in window ) ? 
+	            elm.bind('touchstart', function(evt) {
+	                scope.$apply(function() {
+	                    ontouchFn(scope, { $event: evt, $params: params });
+	                });
+	            }) :
+	            elm.bind('click', function(evt){
+	                    scope.$apply(function() {
+	                        ontouchFn(scope, { $event: evt, $params: params });
+	                    });
+	            });
+	        }
+	    };
+	}]);
+
+So here I create a directive that handle a function on click or Touch event.
+
+The performance improvements on mobile device are huge.
