@@ -1,0 +1,64 @@
+body {
+	margin: 0em auto; 
+	padding: 0em;
+	color: #555;
+	font-weight: bold; 
+	text-align: right; 
+	font-family: "Helvetica Neue", sans-serif
+}
+
+/* ouput */
+.output {
+  position: relative;
+  margin: 0em; 
+  padding: 0.4em 0.5em 1em 0em;
+  border-top: 1px solid #f3f3f3; 
+  background: transparent none 2% 47% no-repeat;
+  cursor: pointer; 
+}
+.output {
+  margin: 0em 0em 0.7em; 
+}
+
+.output.touched {
+  background-color: #cfc; 
+}
+.output h2 {
+  padding: 0em 0.2em 0em;
+  color: #999;
+  font-size: 1.1em; 
+  line-height: 0.5; 
+}
+.output h1 {
+  padding: 0em 0em 0.1em;
+  font-size: 4.7em; 
+  letter-spacing: 0.02em; 
+}
+.output h2 em {
+  left: -0.3em;
+  color: #ccc; 
+}
+
+/* input-pad */
+.input-pad {
+  float: left;
+  width: 105%; 
+  margin: 2% 0% 0% -1%; 
+  padding: 1.5% 0% 5% 5%;
+  background: #f2f2f2 none top left repeat-x; 
+}
+.input-pad li {
+	list-style-type: none;
+	float: left;
+	width: 22%; 
+	padding: 0.7em 0em; 
+	margin: 1.2% 0%;
+	font-size: 2.7em; 
+	text-align: center;
+	cursor: pointer; 
+}
+.input-pad.clear {
+  padding-top: 2.45em;
+  background: none 50% 30% no-repeat;
+  font-size: 1.4em; 
+}
