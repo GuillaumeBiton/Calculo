@@ -16,7 +16,8 @@ app.controller('appCtrl', function($scope) {
 	};
 
 	$scope.solve = function() {
-		if(! /[0-9]/.test(eval($scope.formula.slice(-1)[0]))) return eval($scope.formula.slice(0, $scope.formula.length - 1).join(''));
+        console.log($scope.formula);
+		if(! /[0-9]/.test($scope.formula.slice(-1)[0])) return eval($scope.formula.slice(0, $scope.formula.length - 1).join(''));
         else return eval($scope.formula.join(''));
 	};
 
