@@ -15,7 +15,7 @@
 				<h2>{{formula.join('')}}</h2>
 			</div>
 			<ul class="input-pad">
-				<li ng-repeat='input in pad' on-touch='add(input)'>{{input}}</li>
+				<li ng-repeat='input in pad' on-touch='add(input)' ng-class='{clear: input == "clear"}'>{{input}}</li>
 			</ul>
 		</div>
 		

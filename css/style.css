@@ -6,11 +6,8 @@ body {
 	text-align: right; 
 	font-family: "Helvetica Neue", sans-serif
 }
-
-h1,
-h2 {
-  margin: 0em; 
-  padding: 0em;
+h1, h2 {
+  margin: 0em; padding: 0em;
   font-size: 1em;
 }
 
@@ -64,11 +61,15 @@ h2 {
 	text-align: center;
 	cursor: pointer; 
 }
-.input-pad.clear {
+.input-pad .clear {
   padding-top: 2.45em;
   background: none 50% 30% no-repeat;
   font-size: 1.4em; 
 }
 .input-pad {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdElEQVQY042PUQ7CMAxDn1GuwKQhCrkEiPtfzHyk6zoJifnH0nOdNPq8XzcQv2UqM7FclwGMUQ84OMS6rgMdpH2ogGitFZewPbzY3ojMREWovM+WCnSPzIRpGjbuxXGiTdwfTyTPZaaNaDty+88/XTip0w+/7iQq2gwKVpsAAAAASUVORK5CYII=');
+}
+.input-pad .clear {
+  background-size: 30px 30px; 
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAAMFBMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMySLVSoAAAAD3RSTlMAECAwQFBgcICPn7/P3++kfFgMAAAArklEQVR42u2UwQ6EIAxEi7tWLSj//7fGC5M1UjZzNH0nEnyJTAckCIKXk7bcY00jt9Q+hXCBEm5j9eRSedl+vsxYQf7TNdF2UhvKy80V0ZaSDWS9uRfaEjZX/j4ORbFw5M/xPNIJbldOu1sIdQMrbp3UHZW5ZVS3JHNlZKTF/DZ2+cBgE6NCN6mSiFWmnrCZiwGbuZKwuccANv+G2Vjm7UV4+0jio7nLNkkQBC/kBCeMLotUD9YCAAAAAElFTkSuQmCC');
 }

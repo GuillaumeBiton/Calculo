@@ -194,3 +194,29 @@ So here I create a directive that handle a function on click or Touch event.
 The performance improvements on mobile device are huge.
 
 AngularJS allows filter on values. I use it to have a limitation on numbers.
+
+### Step 6 - Resolving bugs and add a first non-arithmetic option
+
+I have some bugs into the interface like expressions starting without a number. So I use regex pattern to determine what is entered :
+
+	/[0-9]/.test(item)
+
+I want a function that let me clear the last input. I just need to create the function into my controller :
+
+	$scope.remove = function() {
+        $scope.formula.pop();
+        ($scope.formula.length == 0) ? $scope.clear() : null;
+    }
+
+I add my clear button into the pad array. and I add a condition for this function into the add function.
+
+I add others constraints. The first one is that an expression should start with a number and two operators cannot be successives :
+
+	$scope.add = function(item) {
+        if (item == 'clear') { 
+            $scope.remove();
+        } else {
+            (! /[0-9]/.test(item) && ! /[0-9]/.test($scope.formula.slice(-1)[0])) ? $scope.remove() : null;
+            ($scope.formula == '0' && /[0-9]/.test(item)) ? $scope.formula = [item] : $scope.formula.push(item);
+        }
+	};
