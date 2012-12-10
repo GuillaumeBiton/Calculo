@@ -7,6 +7,13 @@ body {
 	font-family: "Helvetica Neue", sans-serif
 }
 
+h1,
+h2 {
+  margin: 0em; 
+  padding: 0em;
+  font-size: 1em;
+}
+
 /* ouput */
 .output {
   position: relative;
@@ -61,4 +68,7 @@ body {
   padding-top: 2.45em;
   background: none 50% 30% no-repeat;
   font-size: 1.4em; 
+}
+.input-pad {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdElEQVQY042PUQ7CMAxDn1GuwKQhCrkEiPtfzHyk6zoJifnH0nOdNPq8XzcQv2UqM7FclwGMUQ84OMS6rgMdpH2ogGitFZewPbzY3ojMREWovM+WCnSPzIRpGjbuxXGiTdwfTyTPZaaNaDty+88/XTip0w+/7iQq2gwKVpsAAAAASUVORK5CYII=');
 }
