@@ -220,3 +220,5 @@ I add others constraints. The first one is that an expression should start with 
             ($scope.formula == '0' && /[0-9]/.test(item)) ? $scope.formula = [item] : $scope.formula.push(item);
         }
 	};
+
+I also need some improvements in css to make it great on smartphone.

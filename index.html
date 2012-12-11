@@ -8,10 +8,10 @@
 		
 		<link rel="stylesheet" href="css/style.css">
 	</head>
-	<body ng-app="Calculo">
-		<div ng-controller="appCtrl">
+	<body ng-app="Calculo" class="">
+		<div ng-controller="appCtrl" class="">
 			<div class="output">
-				<h1 ng-click='clear()'>{{solve() | number}}</h1>
+				<h1 ng-click='fix()'>{{solve() | number}}</h1>
 				<h2>{{formula.join('')}}</h2>
 			</div>
 			<ul class="input-pad">

@@ -20,13 +20,17 @@ app.controller('appCtrl', function($scope) {
         else return eval($scope.formula.join(''));
 	};
 
-	$scope.clear = function() {
+	$scope.reset = function() {
 		$scope.formula = ['0'];
 	};
 
     $scope.remove = function() {
         $scope.formula.pop();
-        ($scope.formula.length == 0) ? $scope.clear() : null;
+        ($scope.formula.length == 0) ? $scope.reset() : null;
+    }
+
+    $scope.fix = function() {
+        $scope.formula = [$scope.solve()];
     }
 });
 
