@@ -222,3 +222,11 @@ I add others constraints. The first one is that an expression should start with 
 	};
 
 I also need some improvements in css to make it great on smartphone.
+
+### Step 6 - Releasing a first version
+
+the webapp respond objectives fix in the beginning so before some improvements, I can release it as a first version.
+
+	git tag v1.0
+
+
